@@ -6,66 +6,25 @@
 /*   By: amenadue <iscoffee.learning@gmail.c>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 17:55:40 by amenadue          #+#    #+#             */
-/*   Updated: 2021/09/13 17:55:40 by amenadue         ###   ########.fr       */
+/*   Updated: 2021/09/14 11:21:31 by amenadue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: amenadue <iscoffee.learning@gmail.c>       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 17:51:19 by amenadue          #+#    #+#             */
-/*   Updated: 2021/09/13 17:51:19 by amenadue         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "libft.h"
 
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: amenadue <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/07 11:08:32 by amenadue          #+#    #+#             */
-/*   Updated: 2021/09/07 11:08:32 by amenadue         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: amenadue <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/07 11:05:46 by amenadue          #+#    #+#             */
-/*   Updated: 2021/09/07 11:05:46 by amenadue         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-char	*ft_strnstr(const char *haystack, const char *needle, unsigned long len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	needle_len;
 
-	i = 0;
-	if (needle[0] == '\0')
-		return (haystack);
-	while (haystack[i] && i < len)
+	needle_len = ft_strlen(needle);
+	if (!needle_len)
+		return ((char *) haystack);
+	while (len >= needle_len)
 	{
-		j = 0;
-		while (needle[j] && (i + j) < len)
-		{
-			if (needle[j] != haystack[i + j])
-				break ;
-			if (needle[j] == '\0')
-				return (haystack[i]);
-			j++;
-		}
-		i++;
+		len--;
+		if (!ft_memcmp(haystack, needle, needle_len))
+			return ((char *) haystack);
+		haystack++;
 	}
 	return (NULL);
 }

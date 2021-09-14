@@ -6,19 +6,7 @@
 /*   By: amenadue <iscoffee.learning@gmail.c>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 17:55:39 by amenadue          #+#    #+#             */
-/*   Updated: 2021/09/13 17:55:39 by amenadue         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: amenadue <iscoffee.learning@gmail.c>       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 17:51:18 by amenadue          #+#    #+#             */
-/*   Updated: 2021/09/13 17:51:18 by amenadue         ###   ########.fr       */
+/*   Updated: 2021/09/14 11:25:26 by amenadue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +29,7 @@ static int	ft_long_border(const char c, int sgn, unsigned long nb)
 	return (1);
 }
 
-int    ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int				i;
 	int				sgn;

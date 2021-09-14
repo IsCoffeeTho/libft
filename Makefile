@@ -6,7 +6,7 @@
 #    By: amenadue <iscoffee.learning@gmail.c>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/13 17:55:39 by amenadue          #+#    #+#              #
-#    Updated: 2021/09/14 10:29:04 by amenadue         ###   ########.fr        #
+#    Updated: 2021/09/14 11:17:11 by amenadue         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,6 +59,7 @@ all:
 
 clean:
 	rm -f $(OUTN)
+	rm -f $(OFILES)
 
 fclean:
 	clean

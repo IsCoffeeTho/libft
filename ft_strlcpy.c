@@ -6,38 +6,23 @@
 /*   By: amenadue <iscoffee.learning@gmail.c>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 17:55:39 by amenadue          #+#    #+#             */
-/*   Updated: 2021/09/13 17:55:39 by amenadue         ###   ########.fr       */
+/*   Updated: 2021/09/14 11:26:48 by amenadue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: amenadue <iscoffee.learning@gmail.c>       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 17:51:19 by amenadue          #+#    #+#             */
-/*   Updated: 2021/09/13 17:51:19 by amenadue         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "libft.h"
 
-#include <libft.h>
-
-size_t	ft_strlcpy(const void *dst, const void *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	int i;
+	const size_t	slen = ft_strlen(src) + 1;
 
-	i = 0;
-	while (src[i] && i < n)
+	if (slen < dstsize)
+		ft_memcpy(dst, src, slen);
+	else if (dstsize != 0)
 	{
-		dst[i] = src[i];
-		i++;
+		dstsize--;
+		ft_memcpy(dst, src, dstsize);
+		dst[dstsize] = '\0';
 	}
-	while (i < n) {
-		dst[i] = '\0';
-		i++;
-	}
-	dst[i] = '\0';
-	return (i);
+	return (slen - 1);
 }
