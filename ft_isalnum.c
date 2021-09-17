@@ -6,11 +6,11 @@
 /*   By: amenadue <iscoffee.learning@gmail.c>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 17:55:39 by amenadue          #+#    #+#             */
-/*   Updated: 2021/09/14 10:33:29 by amenadue         ###   ########.fr       */
+/*   Updated: 2021/09/16 14:38:04 by amenadue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int	ft_isalnum(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (1);

@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amenadue <iscoffee.learning@gmail.c>       +#+  +:+       +#+        */
+/*   By: amenadue <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 17:55:39 by amenadue          #+#    #+#             */
-/*   Updated: 2021/09/16 14:36:58 by amenadue         ###   ########.fr       */
+/*   Created: 2021/09/16 11:59:21 by amenadue          #+#    #+#             */
+/*   Updated: 2021/09/17 12:01:50 by amenadue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "libft.h"
+
+void	*ft_calloc(size_t count, size_t size)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	void	*arr;
+	size_t	req;
+
+	req = count * size;
+	arr = malloc(req);
+	if (!(arr))
+		return (NULL);
+	ft_memset(arr, 0, req);
+	return (arr);
 }

@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amenadue <iscoffee.learning@gmail.c>       +#+  +:+       +#+        */
+/*   By: amenadue <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 17:55:39 by amenadue          #+#    #+#             */
-/*   Updated: 2021/09/16 14:36:58 by amenadue         ###   ########.fr       */
+/*   Created: 2021/09/17 14:18:09 by amenadue          #+#    #+#             */
+/*   Updated: 2021/09/17 14:18:09 by amenadue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "libft.h"
+
+void	ft_putendl_fd(char *s, int fd)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
 }
