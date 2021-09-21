@@ -6,7 +6,7 @@
 /*   By: amenadue <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 15:00:28 by amenadue          #+#    #+#             */
-/*   Updated: 2021/09/21 11:41:40 by amenadue         ###   ########.fr       */
+/*   Updated: 2021/09/21 16:53:49 by amenadue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	slen = ft_strlen(s);
 	new = (char *) malloc((slen - start) + 1);
+	if (start <= slen)
+		return (ft_strdup(""));
 	if (!new)
 		return (NULL);
 	while (start < slen && i < len)
