@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amenadue <iscoffee.learning@gmail.c>       +#+  +:+       +#+        */
+/*   By: amenadue <amenadue@student.42adel.org.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 17:55:39 by amenadue          #+#    #+#             */
-/*   Updated: 2021/09/14 11:26:48 by amenadue         ###   ########.fr       */
+/*   Updated: 2022/03/17 23:02:13 by amenadue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
