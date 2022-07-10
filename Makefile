@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: amenadue <iscoffee.learning@gmail.c>       +#+  +:+       +#+         #
+#    By: amenadue <amenadue@student.42adel.org.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/13 17:55:39 by amenadue          #+#    #+#              #
-#    Updated: 2021/09/17 15:14:39 by amenadue         ###   ########.fr        #
+#    Updated: 2022/07/10 21:06:53 by amenadue         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,9 @@ files 	   = ft_strlen \
 			 ft_putstr_fd \
 			 ft_putendl_fd \
 			 ft_putnbr_fd \
+			 ft_printf \
+			 ft_internal_print_a \
+			 ft_internal_print_b
 
 Compiler	= gcc
 
@@ -70,18 +73,11 @@ $(NAME):
 all: $(NAME)
 
 clean:
-	rm -f $(NAME)
 	rm -f $(OFILES)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-clo:
-	rm -f $(OFILES)
-	
-test:
-	bash ../Libftest/grademe.sh
 
 .PHONY: all, clean, fclean, re
