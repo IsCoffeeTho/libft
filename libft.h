@@ -6,7 +6,7 @@
 /*   By: amenadue <amenadue@student.42adel.org.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 17:51:19 by amenadue          #+#    #+#             */
-/*   Updated: 2022/07/10 21:41:16 by amenadue         ###   ########.fr       */
+/*   Updated: 2022/07/11 12:08:35 by amenadue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,12 @@ typedef struct s_print
 	va_list	args;
 }	t_print;
 
-int	ft_internal_printcharacter(t_print *arg_count);
-int	ft_internal_printstring(t_print *arg_count);
-int	ft_internal_printpointer(t_print *arg_count);
-int	ft_internal_printhex(t_print *arg_count, char character);
-int	ft_internal_printint(t_print *arg_count);
-int	ft_internal_printunsignedint(t_print *arg_count);
+int		ft_internal_printcharacter(t_print *arg_count);
+int		ft_internal_printstring(t_print *arg_count);
+int		ft_internal_printpointer(t_print *arg_count);
+int		ft_internal_printhex(t_print *arg_count, char character);
+int		ft_internal_printint(t_print *arg_count);
+int		ft_internal_printunsignedint(t_print *arg_count);
 int		ft_printf(const char *string, ...);
 
 #endif
